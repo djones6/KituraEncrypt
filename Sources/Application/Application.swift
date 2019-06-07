@@ -22,10 +22,14 @@ public class App {
     public init() throws {
         // Run the metrics initializer
         initializeMetrics(router: router)
+
+        // Create a new eliptic curve key pair for encryption
         eccPrivateKey = try ECPrivateKey.make(for: .prime256v1)
         privateKeyPEM = eccPrivateKey.pemString
         eccPublicKey = try eccPrivateKey.extractPublicKey()
         publicKeyPEM = eccPublicKey.pemString
+
+        // For demonstration purposes, print the generated keys in PEM format
         print("Private key:\n\(privateKeyPEM)")
         print("Public key:\n\(publicKeyPEM)")
     }
