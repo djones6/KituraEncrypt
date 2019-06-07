@@ -1,3 +1,0 @@
-.build/							usr/src/KituraEncrypt
-terraform/scripts/install.sh	usr/src/KituraEncrypt
-terraform/scripts/start.sh		usr/src/KituraEncrypt
